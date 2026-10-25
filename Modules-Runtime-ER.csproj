@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>Modules Runtime</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+    <Prefer32Bit>True</Prefer32Bit>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <ApplicationIcon>Resources\ModulesRuntimeERicon.ico</ApplicationIcon>
+    <RootNamespace>Modules_Runtime_ER</RootNamespace>
+    <Copyright>Mr Exam</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\ModulesRuntimeERicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Modules_Runtime\Main-Form-ER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Modules_Runtime\Main-Form-ER.Designer.cs">
+      <DependentUpon>Main-Form-ER.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Modules_Runtime\Main-Form-ER.resx">
+      <DependentUpon>Main-Form-ER.cs</DependentUpon>
+      <LogicalName>Modules_Runtime_ER.Main_Form_ER.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LogicalName>Modules_Runtime_ER.Properties.Resources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
